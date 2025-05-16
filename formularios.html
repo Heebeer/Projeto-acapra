@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulários - Acapra-BQ</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">Acapra - Brusque</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Sobre</a></li>
+        <li><a href="index.html#adocao">Adoção</a></li>
+        <li><a href="index.html#service">Serviços</a></li>
+        <li><a href="index.html#contact">Contato</a></li>
+        <li><a href="formularios.html">Formulários</a></li>
+      </ul>
+    </nav>
+
+    <section class="section__container forms__container">
+      <p class="section__subheader">Formulários</p>
+      <h2 class="section__header">Preencha o formulário desejado</h2>
+      
+      <div class="forms__tabs">
+        <button class="tab__btn active" data-tab="adocao">Formulário de Adoção</button>
+        <button class="tab__btn" data-tab="depoimento">Formulário de Depoimento</button>
+      </div>
+      
+      <div class="forms__content">
+        <!-- Formulário de Adoção -->
+        <form id="form-adocao" class="form__tab active">
+          <h3>Formulário de Adoção</h3>
+          <div class="form__group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          
+          <div class="form__group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form__group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+          </div>
+          
+          <div class="form__group">
+            <label for="animal">Animal de interesse</label>
+            <select id="animal" name="animal" required>
+              <option value="">Selecione um animal</option>
+              <option value="Difusor">Difusor (Gato)</option>
+              <option value="Mavie">Mavie (Cachorra)</option>
+              <option value="Luzia">Luzia (Gata)</option>
+              <option value="outro">Outro (especificar abaixo)</option>
+            </select>
+          </div>
+          
+          <div class="form__group">
+            <label for="outro-animal">Se selecionou "Outro", qual animal?</label>
+            <input type="text" id="outro-animal" name="outro-animal">
+          </div>
+          
+          <div class="form__group">
+            <label for="endereco">Endereço Completo</label>
+            <input type="text" id="endereco" name="endereco" required>
+          </div>
+          
+          <div class="form__group">
+            <label for="moradia">Tipo de Moradia</label>
+            <select id="moradia" name="moradia" required>
+              <option value="">Selecione</option>
+              <option value="casa">Casa</option>
+              <option value="apartamento">Apartamento</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form__group">
+            <label for="espaco">O local tem espaço adequado para o animal?</label>
+            <select id="espaco" name="espaco" required>
+              <option value="">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+          
+          <div class="form__group">
+            <label for="experiencia">Tem experiência com animais?</label>
+            <textarea id="experiencia" name="experiencia" rows="3" required></textarea>
+          </div>
+          
+          <div class="form__group">
+            <label for="motivacao">Por que deseja adotar este animal?</label>
+            <textarea id="motivacao" name="motivacao" rows="3" required></textarea>
+          </div>
+          
+          <div class="form__group checkbox">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Li e concordo com os termos de adoção responsável</label>
+          </div>
+          
+          <button type="submit" class="submit__btn">Enviar Formulário</button>
+        </form>
+        
+        <!-- Formulário de Depoimento -->
+        <form id="form-depoimento" class="form__tab">
+          <h3>Formulário de Depoimento</h3>
+          
+          <div class="form__group">
+            <label for="depoimento-nome">Nome (opcional)</label>
+            <input type="text" id="depoimento-nome" name="depoimento-nome">
+          </div>
+          
+          <div class="form__group">
+            <label for="depoimento-tipo">Tipo de Relacionamento com a ONG</label>
+            <select id="depoimento-tipo" name="depoimento-tipo">
+              <option value="">Selecione</option>
+              <option value="adotante">Adotante</option>
+              <option value="voluntario">Voluntário</option>
+              <option value="doador">Doador</option>
+              <option value="simpatizante">Simpatizante</option>
+            </select>
+          </div>
+          
+          <div class="form__group">
+            <label for="depoimento-texto">Seu Depoimento</label>
+            <textarea id="depoimento-texto" name="depoimento-texto" rows="5" required></textarea>
+          </div>
+          
+          <div class="form__group checkbox">
+            <input type="checkbox" id="autorizacao" name="autorizacao">
+            <label for="autorizacao">Autorizo a publicação deste depoimento no site da ONG</label>
+          </div>
+          
+          <button type="submit" class="submit__btn">Enviar Depoimento</button>
+        </form>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="index.html">Acapra</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Sessões</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="index.html#service">Serviços</a></li>
+            <li><a href="index.html#contact">Contato</a></li>
+            <li><a href="formularios.html">Formulários</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Newsletter</h4>
+          <p>Fique atualizado com as nossas últimas notícias</p>
+          <form action="/">
+            <input type="text" placeholder="Seu e-mail" />
+            <button class="btn">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+          <br />
+          <h4>Siga nossas redes sociais</h4>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 Acapra Brusque. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="formularios.js"></script>
+  </body>
+</html>
